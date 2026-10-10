@@ -9,6 +9,7 @@ import Contact from "@/components/Contact";
 import { StarsCanvas } from "@/components/canvas";
 import LazyMount from "@/components/LazyMount";
 import { contact, experiences, siteUrl, technologies } from "@/data";
+import { siteBasePath } from "@/lib/site";
 
 // Structured data built only from CV/portfolio content.
 const jsonLd = {
@@ -55,7 +56,7 @@ export default function Home() {
         <Navbar />
       </header>
       <main id="main-content">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center heero">
+        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center heero" style={{ backgroundImage: `url(${siteBasePath}/images/herobg.webp)` }}>
           <Hero />
         </div>
         <About />
@@ -73,3 +74,4 @@ export default function Home() {
     </div>
   );
 }
+

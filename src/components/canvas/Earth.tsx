@@ -6,9 +6,10 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 import { useReducedMotion } from "framer-motion";
 import CanvasLoader from "./Loader";
 import { useInView } from "@/lib/useInView";
+import { siteBasePath } from "@/lib/site";
 
 // Meshopt-compressed with WebP textures (source model in assets-src/).
-const MODEL_URL = "/planet/scene.glb";
+const MODEL_URL = `${siteBasePath}/planet/scene.glb`;
 
 function Earth() {
   const earth = useGLTF(MODEL_URL);
@@ -42,3 +43,4 @@ export default function EarthCanvas() {
     </div>
   );
 }
+

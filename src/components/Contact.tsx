@@ -81,45 +81,49 @@ function Contact() {
     if (errors[name as keyof ContactFields]) setErrors({ ...errors, [name]: undefined });
   };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (status === "sending") return;
+const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  if (status === "sending") return;
 
-    const fieldErrors = validateContact(form);
-    setErrors(fieldErrors);
-    if (Object.keys(fieldErrors).length > 0) {
-      setStatus("error");
-      setStatusMessage("Please fix the highlighted fields.");
-      const first = Object.keys(fieldErrors)[0];
-      document.getElementById(`contact-${first}`)?.focus();
-      return;
-    }
+  const fieldErrors = validateContact(form);
+  setErrors(fieldErrors);
 
-    setStatus("sending");
-    setStatusMessage("Sending your message…");
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, company: honeypot }),
-      });
-      const data = await response.json().catch(() => ({}));
-      if (!response.ok || !data.ok) {
-        if (data.errors) setErrors(data.errors);
-        throw new Error(data.error || "Request failed");
-      }
-      setStatus("success");
-      setStatusMessage("Thank you. I will get back to you as soon as possible.");
-      setForm(emptyForm);
-    } catch (error) {
-      setStatus("error");
-      setStatusMessage(
-        error instanceof Error && error.message !== "Request failed"
-          ? error.message
-          : `Something went wrong. Please try again or email me at ${contact.email}.`
-      );
-    }
-  };
+  if (Object.keys(fieldErrors).length > 0) {
+    setStatus("error");
+    setStatusMessage("Please fix the highlighted fields.");
+    const first = Object.keys(fieldErrors)[0];
+    document.getElementById(`contact-${first}`)?.focus();
+    return;
+  }
+
+  if (honeypot) {
+    setStatus("success");
+    setStatusMessage("Thank you. I will get back to you as soon as possible.");
+    setForm(emptyForm);
+    return;
+  }
+
+  const subject = `Portfolio Contact — ${form.name}`;
+  const body = [
+    `Name: ${form.name}`,
+    `Email: ${form.email}`,
+    "",
+    "Message:",
+    form.message,
+  ].join("\n");
+
+  const mailto = `mailto:${contact.email}?subject=${encodeURIComponent(
+    subject,
+  )}&body=${encodeURIComponent(body)}`;
+
+  window.location.href = mailto;
+
+  setStatus("success");
+  setStatusMessage(
+    "Your email app has been opened with the message ready to send.",
+  );
+  setForm(emptyForm);
+};
 
   const sending = status === "sending";
 

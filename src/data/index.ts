@@ -1,6 +1,8 @@
 // Site content recovered verbatim from the original production bundle.
 // Text (including original typos) is intentionally left unchanged.
 
+import { siteBasePath } from "@/lib/site";
+
 export type NavLink = { id: string; title: string };
 
 export type Service = { title: string; icon: string };
@@ -54,42 +56,42 @@ export const overview =
   "I'm a Frontend Developer with 2+ years of hands-on experience building and delivering production websites and web applications with React, Next.js, TypeScript and Shopify. I turn Figma designs into production-ready, responsive interfaces, build reusable components, and implement Arabic/English RTL/LTR experiences. Currently I'm the Web Team Lead at Respect Marketing Agency, staying hands-on with frontend implementation and technical delivery. Let's work together to bring your ideas to life!";
 
 export const services: Service[] = [
-  { title: "Web Developer", icon: "/images/services/web.png" },
-  { title: "React Framework", icon: "/images/services/mobile.png" },
-  { title: "Responsive Web Apps", icon: "/images/services/backend.png" },
+  { title: "Web Developer", icon: `${siteBasePath}/images/services/web.png` },
+  { title: "React Framework", icon: `${siteBasePath}/images/services/mobile.png` },
+  { title: "Responsive Web Apps", icon: `${siteBasePath}/images/services/backend.png` },
 ];
 
 // Skills rendered as 3D balls. Sources: the original portfolio and the CV.
 // Logos for the CV additions come from the CC0 simple-icons set.
 export const technologies: Technology[] = [
-  { name: "HTML 5", icon: "/images/tech/html.png" },
-  { name: "CSS 3", icon: "/images/tech/css.png" },
-  { name: "JavaScript", icon: "/images/tech/javascript.png" },
-  { name: "TypeScript", icon: "/images/tech/typescript.png" },
-  { name: "React JS", icon: "/images/tech/reactjs.png" },
-  { name: "Next.js", icon: "/images/tech/nextjs.png" },
-  { name: "Redux Toolkit", icon: "/images/tech/redux.png" },
-  { name: "Vite", icon: "/images/tech/vite.svg" },
-  { name: "Tailwind CSS", icon: "/images/tech/tailwindcss.svg" },
-  { name: "Bootstrap", icon: "/images/tech/bootstrap.png" },
-  { name: "Material UI", icon: "/images/tech/mui.svg" },
-  { name: "jQuery", icon: "/images/tech/jquery.svg" },
-  { name: "GSAP", icon: "/images/tech/gsap.svg" },
-  { name: "Framer Motion", icon: "/images/tech/framer.svg" },
-  { name: "Shopify", icon: "/images/tech/shopify.svg" },
-  { name: "WordPress", icon: "/images/tech/wordpress.svg" },
-  { name: "GraphQL", icon: "/images/tech/graphql.svg" },
-  { name: "Firebase", icon: "/images/tech/firebase.svg" },
-  { name: "Resend", icon: "/images/tech/resend.svg" },
-  { name: "RegEx", icon: "/images/tech/regex.png" },
-  { name: "git", icon: "/images/tech/git.png" },
-  { name: "GitHub", icon: "/images/tech/github.png" },
-  { name: "figma", icon: "/images/tech/figma.png" },
-  { name: "Google Tag Manager", icon: "/images/tech/googletagmanager.svg" },
-  { name: "Google Search Console", icon: "/images/tech/googlesearchconsole.svg" },
-  { name: "Cloudflare", icon: "/images/tech/cloudflare.svg" },
-  { name: "Railway", icon: "/images/tech/railway.svg" },
-  { name: "Hostinger", icon: "/images/tech/hostinger.svg" },
+  { name: "HTML 5", icon: `${siteBasePath}/images/tech/html.png` },
+  { name: "CSS 3", icon: `${siteBasePath}/images/tech/css.png` },
+  { name: "JavaScript", icon: `${siteBasePath}/images/tech/javascript.png` },
+  { name: "TypeScript", icon: `${siteBasePath}/images/tech/typescript.png` },
+  { name: "React JS", icon: `${siteBasePath}/images/tech/reactjs.png` },
+  { name: "Next.js", icon: `${siteBasePath}/images/tech/nextjs.png` },
+  { name: "Redux Toolkit", icon: `${siteBasePath}/images/tech/redux.png` },
+  { name: "Vite", icon: `${siteBasePath}/images/tech/vite.svg` },
+  { name: "Tailwind CSS", icon: `${siteBasePath}/images/tech/tailwindcss.svg` },
+  { name: "Bootstrap", icon: `${siteBasePath}/images/tech/bootstrap.png` },
+  { name: "Material UI", icon: `${siteBasePath}/images/tech/mui.svg` },
+  { name: "jQuery", icon: `${siteBasePath}/images/tech/jquery.svg` },
+  { name: "GSAP", icon: `${siteBasePath}/images/tech/gsap.svg` },
+  { name: "Framer Motion", icon: `${siteBasePath}/images/tech/framer.svg` },
+  { name: "Shopify", icon: `${siteBasePath}/images/tech/shopify.svg` },
+  { name: "WordPress", icon: `${siteBasePath}/images/tech/wordpress.svg` },
+  { name: "GraphQL", icon: `${siteBasePath}/images/tech/graphql.svg` },
+  { name: "Firebase", icon: `${siteBasePath}/images/tech/firebase.svg` },
+  { name: "Resend", icon: `${siteBasePath}/images/tech/resend.svg` },
+  { name: "RegEx", icon: `${siteBasePath}/images/tech/regex.png` },
+  { name: "git", icon: `${siteBasePath}/images/tech/git.png` },
+  { name: "GitHub", icon: `${siteBasePath}/images/tech/github.png` },
+  { name: "figma", icon: `${siteBasePath}/images/tech/figma.png` },
+  { name: "Google Tag Manager", icon: `${siteBasePath}/images/tech/googletagmanager.svg` },
+  { name: "Google Search Console", icon: `${siteBasePath}/images/tech/googlesearchconsole.svg` },
+  { name: "Cloudflare", icon: `${siteBasePath}/images/tech/cloudflare.svg` },
+  { name: "Railway", icon: `${siteBasePath}/images/tech/railway.svg` },
+  { name: "Hostinger", icon: `${siteBasePath}/images/tech/hostinger.svg` },
 ];
 
 // Professional experience from the CV, newest first.
@@ -163,7 +165,7 @@ export const projects: Project[] = [
       { name: "GSAP", color: "blue-text-gradient" },
       { name: "next-intl", color: "green-text-gradient" },
     ],
-    image: "/images/projects/civilia.webp",
+    image: `${siteBasePath}/images/projects/civilia.webp`,
     live_link: "https://civiliadevelopments.com/en",
   },
   {
@@ -177,7 +179,7 @@ export const projects: Project[] = [
       { name: "FramerMotion", color: "blue-text-gradient" },
       { name: "Resend", color: "green-text-gradient" },
     ],
-    image: "/images/projects/rowad.jpg",
+    image: `${siteBasePath}/images/projects/rowad.jpg`,
     live_link: "https://rowadalqimma.com/en",
   },
   {
@@ -190,7 +192,7 @@ export const projects: Project[] = [
       { name: "JavaScript", color: "pink-text-gradient" },
       { name: "GSAP", color: "blue-text-gradient" },
     ],
-    image: "/images/projects/axis.jpg",
+    image: `${siteBasePath}/images/projects/axis.jpg`,
     imagePosition: "right",
     live_link: "https://shereif10.github.io/axis-restaurant/",
   },
@@ -202,7 +204,7 @@ export const projects: Project[] = [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "Tailwind", color: "green-text-gradient" },
     ],
-    image: "/images/projects/soun.jpg",
+    image: `${siteBasePath}/images/projects/soun.jpg`,
     imagePosition: "left",
     live_link: "https://soun-theta.vercel.app/en",
   },
@@ -215,7 +217,7 @@ export const projects: Project[] = [
       { name: "CSS", color: "green-text-gradient" },
       { name: "JavaScript", color: "pink-text-gradient" },
     ],
-    image: "/images/projects/primeshield.jpg",
+    image: `${siteBasePath}/images/projects/primeshield.jpg`,
     live_link: "https://www.primeshield.com.sa/",
   },
   {
@@ -228,7 +230,7 @@ export const projects: Project[] = [
       { name: "JavaScript", color: "pink-text-gradient" },
       { name: "GSAP", color: "blue-text-gradient" },
     ],
-    image: "/images/projects/adriloka.jpg",
+    image: `${siteBasePath}/images/projects/adriloka.jpg`,
     imagePosition: "left",
     live_link: "https://shereif10.github.io/Adri-Loka/",
   },
@@ -240,7 +242,7 @@ export const projects: Project[] = [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "Tailwind", color: "green-text-gradient" },
     ],
-    image: "/images/projects/fitrah.jpg",
+    image: `${siteBasePath}/images/projects/fitrah.jpg`,
     imagePosition: "left",
     live_link: "https://fitrah-academy.com/",
   },
@@ -255,7 +257,7 @@ export const projects: Project[] = [
       { name: "Tailwind", color: "blue-text-gradient" },
       { name: "Firebase", color: "green-text-gradient" },
     ],
-    image: "/images/projects/flywings.jpg",
+    image: `${siteBasePath}/images/projects/flywings.jpg`,
     live_link: "https://www.bflywings.com/",
   },
   {
@@ -268,7 +270,7 @@ export const projects: Project[] = [
       { name: "JavaScript", color: "pink-text-gradient" },
       { name: "GraphQL", color: "blue-text-gradient" },
     ],
-    image: "/images/projects/niche.jpg",
+    image: `${siteBasePath}/images/projects/niche.jpg`,
     live_link: "https://nichestoreeg.com/",
   },
 ];
@@ -284,7 +286,7 @@ export const archivedProjects: Project[] = [
       { name: "HTML", color: "blue-text-gradient" },
       { name: "CSS", color: "green-text-gradient" },
     ],
-    image: "/images/projects/fokir.jpg",
+    image: `${siteBasePath}/images/projects/fokir.jpg`,
     source_code_link: "https://github.com/Shereif10/Fokir",
   },
   {
@@ -296,7 +298,7 @@ export const archivedProjects: Project[] = [
       { name: "CSS", color: "green-text-gradient" },
       { name: "Bootstrap", color: "pink-text-gradient" },
     ],
-    image: "/images/projects/devfolio.jpg",
+    image: `${siteBasePath}/images/projects/devfolio.jpg`,
     source_code_link: "https://github.com/Shereif10/DevFolio",
   },
   {
@@ -308,7 +310,7 @@ export const archivedProjects: Project[] = [
       { name: "CSS", color: "green-text-gradient" },
       { name: "Bootstrap", color: "pink-text-gradient" },
     ],
-    image: "/images/projects/daniels.jpg",
+    image: `${siteBasePath}/images/projects/daniels.jpg`,
     source_code_link: "https://github.com/Shereif10/Daniel",
   },
   {
@@ -321,7 +323,7 @@ export const archivedProjects: Project[] = [
       { name: "Bootstrap", color: "pink-text-gradient" },
       { name: "JS", color: "blue-text-gradient" },
     ],
-    image: "/images/projects/smart.jpg",
+    image: `${siteBasePath}/images/projects/smart.jpg`,
     source_code_link: "https://github.com/Shereif10/Smart-Login",
   },
   {
@@ -334,7 +336,7 @@ export const archivedProjects: Project[] = [
       { name: "Bootstrap", color: "pink-text-gradient" },
       { name: "JS", color: "blue-text-gradient" },
     ],
-    image: "/images/projects/crud.jpg",
+    image: `${siteBasePath}/images/projects/crud.jpg`,
     source_code_link: "https://github.com/Shereif10/CRUD",
   },
   {
@@ -348,7 +350,7 @@ export const archivedProjects: Project[] = [
       { name: "JS", color: "blue-text-gradient" },
       { name: "SweetAlert", color: "green-text-gradient" },
     ],
-    image: "/images/projects/bookmark.jpg",
+    image: `${siteBasePath}/images/projects/bookmark.jpg`,
     source_code_link: "https://github.com/Shereif10/BookMark",
   },
   {
@@ -362,7 +364,7 @@ export const archivedProjects: Project[] = [
       { name: "JS", color: "blue-text-gradient" },
       { name: "API", color: "green-text-gradient" },
     ],
-    image: "/images/projects/weather.jpg",
+    image: `${siteBasePath}/images/projects/weather.jpg`,
     source_code_link: "https://github.com/Shereif10/weather",
   },
   {
@@ -376,7 +378,7 @@ export const archivedProjects: Project[] = [
       { name: "JS", color: "blue-text-gradient" },
       { name: "API", color: "green-text-gradient" },
     ],
-    image: "/images/projects/yummy.jpg",
+    image: `${siteBasePath}/images/projects/yummy.jpg`,
     source_code_link: "https://github.com/Shereif10/Yummy",
   },
   {
@@ -390,7 +392,7 @@ export const archivedProjects: Project[] = [
       { name: "JS", color: "blue-text-gradient" },
       { name: "React", color: "green-text-gradient" },
     ],
-    image: "/images/projects/start.jpg",
+    image: `${siteBasePath}/images/projects/start.jpg`,
     source_code_link: "https://github.com/Shereif10/start-framework",
   },
 ];
@@ -409,5 +411,8 @@ export const contact = {
 
 // Public URL of the deployed portfolio, used for canonical/OG/sitemap URLs.
 export const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://shereifahmed.vercel.app"
+  process.env.NEXT_PUBLIC_SITE_URL || "https://shereif10.github.io/Shereif-Portfolio"
 ).replace(/\/$/, "");
+
+
+

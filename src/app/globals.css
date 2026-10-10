@@ -129,7 +129,6 @@
 }
 
 .heero {
-  background-image: url("/images/herobg.webp");
   background-size: cover;
 }
 
@@ -139,3 +138,5 @@
     scroll-behavior: auto;
   }
 }
+
+

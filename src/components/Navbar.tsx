@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { styles } from "@/lib/styles";
 import { navLinks, owner } from "@/data";
+import { siteBasePath } from "@/lib/site";
 
 export default function Navbar() {
   const [active, setActive] = useState("");
@@ -34,7 +35,7 @@ export default function Navbar() {
           }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/logo.svg" alt="" className="w-9 h-9 object-contain" />
+          <img src={`${siteBasePath}/images/logo.svg`} alt="" className="w-9 h-9 object-contain" />
           <p className="text-white text-[18px] font-bold cursor-pointer flex ">
             {`${owner.name}  `}
             <span className="sm:block hidden"> | {owner.role}</span>
@@ -67,7 +68,7 @@ export default function Navbar() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={toggle ? "/images/close.svg" : "/images/menu.svg"}
+              src={toggle ? `${siteBasePath}/images/close.svg` : `${siteBasePath}/images/menu.svg`}
               alt=""
               className="w-[28px] h-[28px] object-contain"
             />
@@ -104,3 +105,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
+

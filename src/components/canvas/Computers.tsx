@@ -5,9 +5,10 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "./Loader";
 import { useMediaQuery } from "@/lib/useMediaQuery";
+import { siteBasePath } from "@/lib/site";
 
 // Meshopt-compressed with WebP textures (source model in assets-src/).
-const MODEL_URL = "/desktop_pc/scene.glb";
+const MODEL_URL = `${siteBasePath}/desktop_pc/scene.glb`;
 
 function Computers({ isMobile }: { isMobile: boolean }) {
   const computer = useGLTF(MODEL_URL);
@@ -59,3 +60,4 @@ export default function ComputersCanvas() {
     </Canvas>
   );
 }
+
